@@ -1,0 +1,25 @@
+{
+  "name": "Markdown Linker HB",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Make it easy to copy links and hatebu mark with markdown-format",
+  "icons": {
+    "48": "icon/icon_048.png",
+    "128": "icon/icon_128.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [{
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": [
+      "jquery-2.1.0.min.js", "content_script.js"
+    ]
+  }],
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ]
+}
